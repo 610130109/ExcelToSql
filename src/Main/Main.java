@@ -12,7 +12,7 @@ public class Main {
 	
 	public static void main(String[] args) {
 		
-		txtToSql(2,58,"test","D:/test.xlsx","D:/sql.sql");
+		txtToSql(2,3,"test","D:/test.xlsx","D:/sql.sql");
 	}
 
 	/**
@@ -43,7 +43,7 @@ public class Main {
 		StringBuffer sql = new StringBuffer();
 		sql.append("CREATE TABLE `"+tableName+"`(\n");
 		
-		for(int i = startRow ;i < endRow ;i++){
+		for(int i = startRow ;i <= endRow ;i++){
 			//获取一行
 			ArrayList<Object> oneRow = result.get(i);
 			//一行前5列 ，字段名、描述、类型、长度、是否为空
